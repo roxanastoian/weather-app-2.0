@@ -11,38 +11,67 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
-        <form>
-          <input type="search" placeholder="Enter a location..." />
-          <input type="submit" value="Search" placeholder="Search" />
-        </form>
-        <div class="row">
-          <div class="col-6">
-            <h1>Craiova</h1>
-            <h3>April 18, 2023</h3>
-            <h3>14:25</h3>
-          </div>
-          <div class="col-6">
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-              alt=""
-            />
-            <div>
-              25°C
-              <div class="temperatures"><span>30°C / 12°C</span></div>
+        <div class="today-forecast">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a location..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  placeholder="Search"
+                  class="search-click"
+                />
+              </div>
+            </div>
+          </form>
+          <h1>Craiova</h1>
+          <h3>April 18, 2023</h3>
+          <h3>14:25</h3>
+          <div class="row today-conditions">
+            <div class="col-4 d-flex">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                alt=""
+              />
+            </div>
+            <div class="col-3 current-temp">
+              <div class="condition">Cloudy</div>
+              <div class="today-temperature">25°C</div>
+              <div class="max-temperature">
+                30°C / <span class="min-temperature">12°C</span>
+              </div>
+            </div>
+            <div class="col-5">
+              <ul>
+                <li>Feels like: 26°C</li>
+                <li>Humidity: 60</li>
+                <li>Wind: 2km/h</li>
+                <li>Pressure: 1209</li>
+              </ul>
             </div>
           </div>
         </div>
-        <ul>
-          <li>Feels like: 26°</li>
-          <li>Humidity: 60</li>
-          <li>Wind: 2km/h</li>
-          <li>Pressure: 1209</li>
-        </ul>
       </div>
       <small>
         <a href="#" target="_blank">Open-source code</a> by Roxana Stoian
