@@ -11,6 +11,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,37 +46,38 @@
               </div>
             </div>
           </form>
-          <h1>Craiova</h1>
-          <h3>April 18, 2023</h3>
-          <h3>14:25</h3>
+          <h1 id="city"></h1>
+          <div class="date" id="date"></div>
           <div class="row today-conditions">
             <div class="col-4 d-flex">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                alt=""
-              />
+              <img src="#" alt="" id="icon" />
             </div>
             <div class="col-3 current-temp">
-              <div class="condition">Cloudy</div>
-              <div class="today-temperature">25°C</div>
-              <div class="max-temperature">
-                30°C / <span class="min-temperature">12°C</span>
-              </div>
+              <div class="condition" id="description"></div>
+              <strong class="today-temperature" id="temperature"></strong
+              ><span>°C</span>
             </div>
             <div class="col-5">
               <ul>
-                <li>Feels like: 26°C</li>
-                <li>Humidity: 60</li>
-                <li>Wind: 2km/h</li>
-                <li>Pressure: 1209</li>
+                <li>Feels like: <span id="feels-like"></span>°C</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> Km/h</li>
+                <li>Pressure: <span id="pressure"></span></li>
               </ul>
             </div>
           </div>
         </div>
+        <hr />
+        <div class="weather-forecast" id="forecast"></div>
+        <small class="link">
+          <a
+            href="https://github.com/roxanastoian/weather-app-2.0"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Roxana Stoian
+        </small>
       </div>
-      <small>
-        <a href="#" target="_blank">Open-source code</a> by Roxana Stoian
-      </small>
     </div>
     <script src="src/app.js"></script>
   </body>
