@@ -135,5 +135,6 @@ a {
 }
 
 small {
-  margin-left: 45px;
+  display: block;
+  text-align: center;
 }
