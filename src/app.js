@@ -6,7 +6,7 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
   if (hours < 10) {
-    hours = `${hours}`;
+    hours = `0${hours}`;
   }
   let days = [
     "Sunday",
