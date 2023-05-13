@@ -86,12 +86,12 @@ a {
   border-radius: 5px;
   border: none;
   color: #10132f;
-  background-color: #bec5ff;
+  background-color: #b4bbfa;
   transition: all 200ms ease-in-out;
 }
 
 .search-click:hover {
-  background: #b4bbfa;
+  background: #a3acf9;
   cursor: pointer;
   padding: 11px 29px;
 }
